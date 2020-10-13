@@ -14,8 +14,8 @@ try {
 }
 
 // verify schema
-$tbls = $db->query("SELECT TABLES");
-if ($tbls->num_rows == 0) {
+$count = $db->query('show tables')->fetch(PDO::FETCH_NUM);
+if ($count == 0) {
   echo "initializing db<br />";
 }
 echo "Hello world!";
