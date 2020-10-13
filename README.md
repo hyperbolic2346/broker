@@ -12,6 +12,7 @@ Item table
  - settings id - settings to use for this item
  - auction amount - number of items to auction
  - split auctions - bool to indicate grouping into a single auction with multiple items vs multiple auctions
+
 Settings table
  - settings id
  - auto accept price
@@ -52,12 +53,15 @@ Settings table
  - weight unit
  - who pays shipping
  - will ship international
+ 
 Picture Group - a grouping of pictures... like glock 44
  - group id
  - group name
+ 
 Picture groups - groups of pictures - no id is unique here and can be repeated if the picture is in multiple groups or a group has multiple pictures
  - group id
  - picture id
+
 Picture
  - picture id
  - picture filename
