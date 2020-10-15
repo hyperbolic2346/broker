@@ -72,7 +72,13 @@ if ($count == 0) {
                                   filename varchar(200),
                                   data BLOB)');
 }
-echo "Main Menu | Add Item | Add photos | Create or Edit Item Settings<br />";
+echo "Main Menu | <a href="index.php?page=add_item">Add Item</a> | <a href="index.php?page=photos">Add photos</a> | <a href="index.php?page=settings">Create or Edit Item Settings</a><br />";
+
+if (isset($_REQUEST['page']) && file_exists($_REQUEST['page'].'.php')) {
+  include($_REQUEST['page'].'.php');
+  $_REQUEST['page']();
+}
+
 echo "Hello world!";
 
 ?>
