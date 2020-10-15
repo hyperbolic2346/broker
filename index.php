@@ -64,6 +64,13 @@ if ($count == 0) {
                                       weight_unit tinyint(1) unsigned,
                                       who_pays_for_shipping tinyint(2) unsigned,
                                       will_ship_international bool)');
+  $db->query('create table picture_group (id mediumint auto_increment primary key,
+                                  name varchar(200))');
+  $db->query('create table picture_groups (group_id mediumint key,
+                                  picture_id mediumint)');
+  $db->query('create table picture (id mediumint auto_increment primary key,
+                                  filename varchar(200),
+                                  data BLOB)');
 }
 echo "Main Menu | Add Item | Add photos | Create or Edit Item Settings<br />";
 echo "Hello world!";
